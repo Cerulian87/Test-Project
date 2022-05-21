@@ -1,7 +1,7 @@
 # objects for Project 4
 
 
-
+#Player object params
 class Player:
     def __init__(self, playerID=0, batOrder=0, firstName="", lastName="", position="", atBats=0, hits=0):
         self.playerID = playerID
@@ -44,10 +44,12 @@ class Player:
         return f"{average:.3f}"
 
 class Lineup:
-    def __init__(self, results):
-        self.__lineup = []
-        for row in results:
-            self.__lineup.append(make_list_object(row))
+    def __init__(self):
+        self.__lineup = []   # Here's where the player objects will be stored
+
+    def make_player_object(row):
+        return Player(row["playerID"], row["batOrder"], row["firstName"], row["lastName"],
+                        row["position"], row["atBats"], row["hits"])
 
     def addPlayer(self, new_player):
         self.__lineup.append(new_player)
@@ -64,17 +66,16 @@ class Lineup:
     def move(self, player_index, player):
         self.__lineup.insert(player_index, player)
 
-    def __iter__(self):
+    def __iter__(self):   # Making the lineup list iterable
         self.__index = -1
         return self
 
-    def __next__(self):
+    def __next__(self):   # Used this method as per my assignment specs for the iter above
         if self.__index == len(self.__lineup) - 1:
             raise StopIteration
         self.__index += 1
         item = self.__lineup[self.__index]
         return item
 
-def make_list_object(row):
-    return Player(row["playerID"], row["batOrder"], row["firstName"], row["lastName"], row["position"], row["atBats"], row["hits"])
+
 

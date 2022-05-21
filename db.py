@@ -13,7 +13,7 @@ from objects import Player, Lineup
 
 conn = None
 
-
+# Connecting to the local database
 def connect():
     global conn
     if not conn:
@@ -33,7 +33,10 @@ def get_players():
     with closing(conn.cursor()) as c:
         c.execute(query)
         results = c.fetchall()
-    return Lineup(results)
+    lineupObject = Lineup()
+    for row in results:
+        lineupObject.addPlayer(Lineup.make_player_object(row))
+    return lineupObject
 
 
 def get_player(playerID):
@@ -78,6 +81,7 @@ def update_bat_order(lineup):
             conn.commit()
 
 # I wasn't completely sure what exactly you wanted here to be honest.
+# -- Update, apparently this is exactly what my professor wanted --
 def update_player(player):
     sql = '''UPDATE Player
             SET batOrder = ?,
@@ -93,7 +97,7 @@ def update_player(player):
 
 
 def main():
-    # code you provided to test the get_players function
+    # code to test the get_players function
     connect()
     players = get_players()
     if players != None:
@@ -113,7 +117,7 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    main() 
 
 
 

@@ -1,6 +1,6 @@
 #Johnathon Martin
 #Project 4
-#08MAY22
+#Due 08MAY22
 #This is the Team Management Python program, project 4, refactored to use SQL!
 
 # UI
@@ -26,7 +26,7 @@ def main_menu():
     print("C, 1B, 2B, 3B, SS, LF, CF, RF, P")
     print("=" * 60)
 
-def get_int(prompt):  # I absolutely loved this idea, stealing it forever
+def get_int(prompt):  # I absolutely loved this method for checking integers
     while True:
         try:
             return int(input(prompt))
@@ -117,6 +117,7 @@ def move_player():
     print()
 
 
+# Function for editing player's role on the team.
 def edit_position(): 
     lineup = db.get_players()
     v_position = ("C","1B","2B","3B","SS","LF","CF","RF","P")
@@ -145,6 +146,7 @@ def edit_position():
 
     print()
 
+# Batting stats...
 def edit_stats(): 
     lineup = db.get_players()
 
@@ -182,6 +184,7 @@ def edit_stats():
 def main():
 
 
+# This was inteded to make sure I understood how to use the datetime etc...
     print("=" * 60)
     print("\t\t Baseball Team Management Program")
     print()
