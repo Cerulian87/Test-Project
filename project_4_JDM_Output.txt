@@ -1,0 +1,96 @@
+============================================================
+                 Baseball Team Management Program
+
+CURRENT DATE: 2022-05-08
+GAME DATE: 2022-05-12
+DAYS UNTIL GAME: 4
+
+MENU OPTIONS
+1 - Display lineup
+2 - Add player
+3 - Remove player
+4 - Move Player
+5 - Edit player position
+6 - Edit player stats
+7 - Exit program
+
+POSITIONS
+C, 1B, 2B, 3B, SS, LF, CF, RF, P
+============================================================
+Menu Option: 1
+   Player                            POS    AB     H     AVG
+------------------------------------------------------------
+1  Dominick Gilbert                   1B   537   170   0.317
+2  Craig Mitchell                     CF   396   125   0.316
+3  Jack Quinn                         RF   345    99   0.287
+4  Simon Harris                        C   450   135   0.300
+5  Darryl Moss                        3B   501   120   0.240
+6  Grady Guzman                       SS   463   114   0.246
+7  Wallace Cruz                       LF   443   131   0.296
+8  Cedric Cooper                      2B   165    54   0.327
+9  Alberto Gomez                       P    72    19   0.264
+
+Menu Option: 2
+Enter Player's First Name: Johnathon
+Enter Player's Last Name: Martin
+Enter Position: P
+Enter Batting Order: 10
+Enter At bats: 350
+Enter Hits: 211
+Johnathon was added.
+
+
+Menu Option: 1
+   Player                            POS    AB     H     AVG
+------------------------------------------------------------
+1  Dominick Gilbert                   1B   537   170   0.317
+2  Craig Mitchell                     CF   396   125   0.316
+3  Jack Quinn                         RF   345    99   0.287
+4  Simon Harris                        C   450   135   0.300
+5  Darryl Moss                        3B   501   120   0.240
+6  Grady Guzman                       SS   463   114   0.246
+7  Wallace Cruz                       LF   443   131   0.296
+8  Cedric Cooper                      2B   165    54   0.327
+9  Alberto Gomez                       P    72    19   0.264
+10 Johnathon Martin                    P   350   211   0.603
+
+Menu Option: 6
+Enter a lineup number to edit: 10
+You selected Johnathon Martin
+Enter new At Bats: 1000
+Enter new Hits: 999
+Johnathon Martin was updated.
+
+Menu Option: 1
+   Player                            POS    AB     H     AVG
+------------------------------------------------------------
+1  Dominick Gilbert                   1B   537   170   0.317
+2  Craig Mitchell                     CF   396   125   0.316
+3  Jack Quinn                         RF   345    99   0.287
+4  Simon Harris                        C   450   135   0.300
+5  Darryl Moss                        3B   501   120   0.240
+6  Grady Guzman                       SS   463   114   0.246
+7  Wallace Cruz                       LF   443   131   0.296
+8  Cedric Cooper                      2B   165    54   0.327
+9  Alberto Gomez                       P    72    19   0.264
+10 Johnathon Martin                    P  1000   999   0.999
+
+Menu Option: 3 
+Enter a linup number to remove: 10
+Johnathon Martin was deleted.
+
+Menu Option: 1
+   Player                            POS    AB     H     AVG
+------------------------------------------------------------
+1  Dominick Gilbert                   1B   537   170   0.317
+2  Craig Mitchell                     CF   396   125   0.316
+3  Jack Quinn                         RF   345    99   0.287
+4  Simon Harris                        C   450   135   0.300
+5  Darryl Moss                        3B   501   120   0.240
+6  Grady Guzman                       SS   463   114   0.246
+7  Wallace Cruz                       LF   443   131   0.296
+8  Cedric Cooper                      2B   165    54   0.327
+9  Alberto Gomez                       P    72    19   0.264
+
+Menu Option: 7
+Bye!
